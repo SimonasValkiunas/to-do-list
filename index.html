@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./Item.js"></script>
+    <script src="./StorageManager.js"></script>
+    <script src="./main.js"></script>
+    <title>To do list</title>
+</head>
+<body>
+    <div class="main">
+        <div class="addItem">
+            <label for="description"> Description</label>
+            <input type="text" placeholder="description"id="description" name="description" maxlength="160">
+            <label for="deadline"> Deadline</label>
+            <input type="datetime-local" id="deadline" name="deadline">
+            <button class='add' onclick="addItem(event)">Add</button>
+        </div>
+        <div class="sortItems">
+            <button onclick="sortBy('completeDesc')">Sort by completed</button>
+            <button onclick="sortBy('timeLeftDesc')">Sort by most time left</button>
+            <button onclick="sortBy('timeLeftAsc')">Sort by least time left</button>
+        </div>
+    <div class="itemList">
+    </div>
+    </div>
+</body>
+</html>
